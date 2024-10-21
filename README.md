@@ -1,1 +1,1 @@
-This is my portfolio website : https://pavankumarshinde.github.io/Portfolio/
+Explore my portfolio website at https://pavankumarshinde.github.io/Portfolio/
