@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="your-favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+          
+            <ul id="nav-menu">
+                <li id="home-link" onclick="scrollToSection('home', this)" class="active">Home</li>
+                <li id="about-link" onclick="scrollToSection('about', this)">About</li>
+                <li id="portfolio-link" onclick="scrollToSection('portfolio', this)">Portfolio</li>
+                <li id="connect-link" onclick="scrollToSection('connect', this)">Connect</li>
+            </ul>
+            
+            <div id="middle_icon">
+                <img src="images/middle_icon.png" alt="Middle Icon">
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/Pavankumarshinde"><img src="images/github.png" alt="GitHub" class="icon"></a>
+                <a href="https://www.linkedin.com/in/pavankumar-shinde-63802b309/"><img src="images/linkedin.png" alt="LinkedIn" class="icon"></a>
+                <a href="https://www.instagram.com/pavankumar_shinde_19/"><img src="images/instagram.png" alt="Instagram" class="icon"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero"  id="home">
+            <div class="hero-content">
+                <img src="images/hero.png" alt="Person working on laptop" class="hero-image">
+                <div class="hero-text">
+                    <h1>BUILD YOUR WEBSITE TODAY</h1>
+                </div>
+            </div>
+        </div>
+        <p class="bottom-right">Connect with us: <a href="mailto:co22btech11008@iith.ac.in">co22btech11008@iith.ac.in</a></p>
+    </main>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/my_photo.png" alt="Pavankumar Shinde" class="profile-pic">
+            </div>
+            <div class="about-details">
+                <h2>Pavankumar Shinde</h2>
+                <p>Upcoming Summer Intern @Nikko Co. Ltd, Japan</p>
+                <p> 3rd Year @IITH  |  Team Lead @EML  |  Inbound & Media Head @Cepheid
+                   </p> <p>Computational Engineer  |  ML Developer  |  Web Developer
+                    </p>
+                
+                <div>
+                    <li>Excellent in programming languages: C/C++, Python, JavaScript</li>
+                    <li>Experienced with ML libraries: Scikit-learn, SciPy, Matplotlib, Pandas</li>
+                    <li>Familiar with development essentials: GitHub, VS Code</li>
+                </div>
+                <a href="https://drive.google.com/file/d/1YJg1GzisyKAhmWXPnuVUuo58dxSZkBfO/view?usp=drive_link" class="btn">Download CV</a>
+                <a href="https://github.com/Pavankumarshinde" class="btn">Check GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="section-heading">Work & Projects</h2>
+        <div id="projects_names">
+            <a id="project1-btn" onclick="showProject('project1', this)" class="active">Speech Recognition using DTW</a>
+            <a id="project2-btn" onclick="showProject('project2', this)">Telescope Automation Project</a>
+            <a id="project3-btn" onclick="showProject('project3', this)">Multithreading Matrix Multiplication</a>
+        </div>
+        
+
+        <div id="project1" class="portfolio-container active">
+            <div class="portfolio-image">
+                <img src="images/work-space.png" alt="Work-space" class="workspace-pic">
+            </div>
+            <div class="portfolio-details">
+                <h3>Speech Recognition using DTW</h3>
+                <li>Implemented Dynamic Time Warping (DTW) from scratch for speech recognition of single digits, achieving high accuracy. Successfully developed signal templates using Mel Frequency Cepstral Coefficients (MFCCs) and utilized them to calculate Cumulative Distance Matrices for differentiating between templates.
+                </li><li> Tested with diverse voices to enhance Accuracy and created a detailed Confusion Matrix to evaluate performance efficiently 
+                    </li>
+                    <a href="https://github.com/Pavankumarshinde" class="btn">See On Github</a>
+                </div>
+        </div>
+
+        <div id="project2" class="portfolio-container">
+            <div class="portfolio-image">
+                <img src="images/work-space.png" alt="Work-space" class="workspace-pic">
+            </div>
+            <div class="portfolio-details">
+                <h3>Telescope Automation Project</h3>
+                <li>Developed a system using skyfield library in Python that takes location (longitude and latitude), current time, and
+                    target celestial object as input and calculates the required direction for the telescope to point at the target in term
+                    of Altitude (Alt) and Azimuth (Az) coordinates.
+                  </li><li>  Enhanced astronomical observations by automating the alignment process, ensuring precise and efficient
+                    targeting of celestial objects.</li>
+
+                <a href="https://github.com/Pavankumarshinde" class="btn">See On Github</a>
+            </div>
+        </div>
+
+        <div id="project3" class="portfolio-container">
+            <div class="portfolio-image">
+                <img src="images/work-space.png" alt="Work-space" class="workspace-pic">
+            </div>
+            <div class="portfolio-details">
+                <h3>Multithreading Matrix Multiplication</h3>
+                <li>Implemented synchronized process execution using multithreading with pthreads, on matrix multiplication.</li>
+                <li>Developed an optimized multithreaded algorithm for matrix multiplication to improve computational efficiency.</li>
+                
+                <a href="https://github.com/Pavankumarshinde" class="btn">See On Github</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="connect">
+        <h2>Connect with us</h2>
+        <div class="connect-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="connect-form">
+                <input type="hidden" name="access_key" value="a4aba430-69f2-4bb9-b4fa-d346727ca810">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email id:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send it >></button>
+            </form>
+            <div class="connect-image">
+                <img src="images/pavan.png" alt="Pavankumar Shinde" class="connect-pic">
+                <h3>Pavankumar Shinde </h3>
+                 <p>  Pre-Final Year Btech IITH</p>
+                <a href="mailto:co22btech11008@iith.ac.in">co22btech11008@iith.ac.in</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
