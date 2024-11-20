@@ -2,92 +2,96 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
+    max-width: 100vw;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
     background-color: #000;
     color: #fff;
-}
-
-header {
+  }
+  
+  header {
     position: fixed;
     top: 0;
     left: 0;
-    height:40px;
+    height: 40px;
     width: 100%;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.9); /* Make header slightly transparent */
-}
-
-nav {
+  }
+  .hamburger {
+    display: none;
+  }
+  
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-}
-
-nav ul {
+    max-width: 100%;
+  }
+  
+  nav ul {
     list-style-type: none;
     display: flex;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     margin-right: 50px;
-}
-ul {
+  }
+  ul {
     list-style-type: none;
     display: flex;
     padding: 0;
-}
-
-ul li {
+  }
+  
+  ul li {
     margin-right: 50px;
     cursor: pointer;
     font-weight: 600;
     color: #fff; /* Default color */
-}
-
-ul li.active {
-    color: #EB4A4A; /* Red color for active link */
-}
-
-ul li:hover {
-    color: #EB4A4A; /* Red on hover */
-}
-
-nav ul li a {
+  }
+  
+  ul li.active {
+    color: #eb4a4a; /* Red color for active link */
+  }
+  
+  ul li:hover {
+    color: #eb4a4a; /* Red on hover */
+  }
+  
+  nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: 600;
-}
-
-nav ul li a:hover {
-    color: #EB4A4A;
-}
-
-
-#nav-menu {
+  }
+  
+  nav ul li a:hover {
+    color: #eb4a4a;
+  }
+  
+  #nav-menu {
     list-style: none;
     display: flex;
     justify-content: space-around;
-}
-#nav-menu li {
+  }
+  #nav-menu li {
     cursor: pointer;
-}
-#nav-menu li.active {
+  }
+  #nav-menu li.active {
     color: red; /* Active link color */
-}
-
-#middle_icon {
+  }
+  
+  #middle_icon {
     padding: 0 20px;
-}
-
-.social-icons {
+  }
+  
+  .social-icons {
     display: flex;
-}
-
-.social-icons a {
+  }
+  
+  .social-icons a {
     background-color: #fff;
     width: 40px;
     height: 40px;
@@ -96,141 +100,145 @@ nav ul li a:hover {
     align-items: center;
     border-radius: 50%;
     margin-left: 15px;
-}
-
-.icon {
+  }
+  
+  .icon {
     width: 100%;
     height: auto;
-}
-
-.hero {
-    width: 100vw;
+  }
+  
+  .hero {
+    max-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: left;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     margin-top: 80px; /* Adjust to account for the fixed header */
-}
-
-.hero-content {
+    padding: 100px; /* new*/
+  }
+  
+  .hero-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.hero-image {
-    max-width: 800px;
-}
-
-.hero-text {
+  }
+  
+  .hero-image {
+    max-width: 100%;
+    flex-basis: 50%; /* new */
+  }
+  
+  .hero-text {
     max-width: 500px;
     text-align: left;
-}
-
-.hero-text h1 {
+    flex-basis: 50%; /*new */
+  }
+  
+  .hero-text h1 {
     font-size: 128px;
     font-weight: 1000;
     letter-spacing: 0.5px;
     line-height: 0.9;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     color: rgb(181, 178, 178);
-}
-
-.bottom-right {
-    position:absolute;
+  }
+  
+  .bottom-right {
+    position: relative;
     bottom: 20px;
     right: 20px;
     text-align: right;
-}
-
-.bottom-right a {
-    color: #EB4A4A;
-}
-
-.bottom-right a:hover {
+  }
+  
+  .bottom-right a {
+    color: #eb4a4a;
+  }
+  
+  .bottom-right a:hover {
     text-decoration: underline;
-}
-
-/* About Section */
-#about {
+  }
+  
+  /* About Section */
+  #about {
     background-color: #000;
     padding: 10px;
     color: #fff;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: left;
-    align-content: left;
+    /* align-content: left; */
     justify-content: center;
-}
-
-.about-container {
+  }
+  
+  .about-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
     flex-wrap: wrap;
-}
-
-.about-image {
+  }
+  
+  .about-image {
     flex-basis: 20%;
     display: flex;
     justify-content: left;
-}
-
-.profile-pic {
+  }
+  
+  .profile-pic {
     width: 650px;
     height: auto;
-}
-
-.about-details {
+  }
+  
+  .about-details {
     flex-basis: 55%;
     padding: 20px;
-}
-
-.about-details h2 {
-    font-size: 55px;
-    letter-spacing: 10px;
+  }
+  
+  .about-details h2 {
+    /* font-size: 55px;
+    letter-spacing: 10px; */
+    font-size: 36px; /* Adjusted for mobile new */
+    letter-spacing: 5px; /* Adjusted for mobile new */
     font-weight: 1000;
     /* margin-bottom: 20px; */
-}
-
-.about-details p {
+  }
+  
+  .about-details p {
     font-size: 22px;
     color: rgb(199, 194, 194);
     line-height: 1;
     margin-bottom: 10px;
     /* padding-bottom: 20px; */
-}
-.about-details div{
+  }
+  .about-details div {
     margin-top: 30px;
-}
-
-.about-details .btn {
-    
+  }
+  
+  .about-details .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #EB4A4A;
+    background-color: #eb4a4a;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    width: 200px;
+    /* width: 200px; */
     border-radius: 30px;
     margin: 40px;
     margin-top: 100px;
     align-content: center;
     align-items: center;
-}
-
-.about-details .btn:hover {
-    background-color:white;
-    color:  #EB4A4A;
-}
-/* Portfolio Section */
-#portfolio {
+  }
+  
+  .about-details .btn:hover {
+    background-color: white;
+    color: #eb4a4a;
+  }
+  /* Portfolio Section */
+  #portfolio {
     background-color: #000;
     color: #fff;
     width: 100vw;
@@ -238,58 +246,57 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.section-heading {
+  }
+  
+  .section-heading {
     font-size: 100px;
     font-weight: 1000;
     margin-bottom: 40px;
     color: #fff;
     align-items: center;
     /* align-content: ; */
-}
-
-.portfolio-container {
+  }
+  
+  .portfolio-container {
     display: flex;
     justify-content: space-between;
-    align-items:top;
+    align-items: top;
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
-}
-
-.portfolio-image {
+  }
+  
+  .portfolio-image {
     flex-basis: 50%;
     display: flex;
     justify-content: center;
-}
-
-.workspace-pic {
+  }
+  
+  .workspace-pic {
     max-width: 100%;
     height: auto;
-}
-
-.portfolio-details {
+  }
+  
+  .portfolio-details {
     flex-basis: 50%;
     padding: 10px;
-}
-
-.portfolio-details h3 {
+  }
+  
+  .portfolio-details h3 {
     font-size: 32px;
-    color: #EB4A4A;
-}
-
-.project li {
-    
+    color: #eb4a4a;
+  }
+  
+  .project li {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 10px;
-}
-
-.project .btn {
+  }
+  
+  .project .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #EB4A4A;
+    background-color: #eb4a4a;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -299,22 +306,22 @@ nav ul li a:hover {
     margin-top: 100px;
     align-content: center;
     align-items: center;
-    
-}
-
-.project .btn:hover {
+  }
+  
+  .project .btn:hover {
     background-color: #fff;
-    color: #EB4A4A;
-    border: 1px solid #EB4A4A;
-}
-/* Include CSS styles here for demonstration */
-body {
-    font-family: 'Poppins', sans-serif;
+    color: #eb4a4a;
+    border: 1px solid #eb4a4a;
+  }
+  /* Include CSS styles here for demonstration */
+  body {
+    font-family: "Poppins", sans-serif;
     background-color: #000;
     color: #fff;
-}
-
-#portfolio {
+    overflow-x: hidden; /*new*/
+  }
+  
+  #portfolio {
     background-color: #000;
     color: #fff;
     width: 100vw;
@@ -322,91 +329,88 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.section-heading {
+  }
+  
+  .section-heading {
     font-size: 100px;
     font-weight: 1000;
     margin-bottom: 40px;
     color: #fff;
-}
-
-#projects_names {
+  }
+  
+  #projects_names {
     margin-bottom: 20px;
-}
-
-#projects_names a {
+  }
+  
+  #projects_names a {
     margin-right: 20px;
     text-decoration: none;
-    color: #EB4A4A;
+    color: #eb4a4a;
     font-weight: 600;
-}
-
-.portfolio-container {
+  }
+  
+  .portfolio-container {
     display: none;
     justify-content: space-between;
     align-items: top;
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
-}
-
-.portfolio-container.active {
+  }
+  
+  .portfolio-container.active {
     display: flex;
-}
-
-.portfolio-image {
+  }
+  
+  .portfolio-image {
     flex-basis: 50%;
     display: flex;
     justify-content: center;
-}
-
-.portfolio-image img {
+  }
+  
+  .portfolio-image img {
     max-width: 100%;
     height: auto;
-}
-
-.portfolio-details {
+  }
+  
+  .portfolio-details {
     flex-basis: 50%;
     padding: 10px;
-}
-
-.portfolio-details h3 {
+  }
+  
+  .portfolio-details h3 {
     font-size: 32px;
-    color: #EB4A4A;
-}
-
-.project li {
+    color: #eb4a4a;
+  }
+  
+  .project li {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 10px;
-}
-
-
-
-.btn {
+  }
+  
+  .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #EB4A4A;
+    background-color: #eb4a4a;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     width: 200px;
     border-radius: 30px;
     margin-top: 20px;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     background-color: #fff;
-    color: #EB4A4A;
-    border: 1px solid #EB4A4A;
-}
-
-
-.portfolio-container {
+    color: #eb4a4a;
+    border: 1px solid #eb4a4a;
+  }
+  
+  .portfolio-container {
     display: none;
-}
-#projects_names a {
+  }
+  #projects_names a {
     margin-right: 20px;
     text-decoration: none;
     color: #fff;
@@ -414,70 +418,70 @@ body {
     padding: 10px 20px;
     border: 1px solid #fff;
     border-radius: 5px;
-}
-
-#projects_names a.active {
-    color: #EB4A4A; /* Active color */
-    border-color: #EB4A4A;
-}
-
-#projects_names a:hover {
-    color: #EB4A4A;
-}
-
-.portfolio-container {
+  }
+  
+  #projects_names a.active {
+    color: #eb4a4a; /* Active color */
+    border-color: #eb4a4a;
+  }
+  
+  #projects_names a:hover {
+    color: #eb4a4a;
+  }
+  
+  .portfolio-container {
     display: none;
     justify-content: space-between;
     align-items: top;
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
-}
-
-.portfolio-container.active {
+  }
+  
+  .portfolio-container.active {
     display: flex;
-}
-
-/* Connect Section */
-#connect {
+  }
+  
+  /* Connect Section */
+  #connect {
     background-color: #000;
     color: #fff;
     width: 100vw;
     padding: 20px 0;
     text-align: center;
-}
-
-#connect h2 {
+  }
+  
+  #connect h2 {
     margin-top: 60px;
     font-size: 100px;
     font-weight: 1000;
     margin-bottom: 40px;
     color: #fff;
-}
-
-.connect-container {
+  }
+  
+  .connect-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
     margin: 0 auto;
-}
-
-.connect-form {
+  }
+  
+  .connect-form {
     flex-basis: 50%;
     text-align: left;
     padding: 20px;
-}
-
-.connect-form label {
+  }
+  
+  .connect-form label {
     display: block;
     font-size: 24px;
     margin-bottom: 10px;
     color: #fff;
-}
-
-.connect-form input,
-.connect-form textarea {
+  }
+  
+  .connect-form input,
+  .connect-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -485,59 +489,250 @@ body {
     background-color: #ffffff;
     color: #000000;
     font-size: 18px;
-}
-
-.connect-form button {
+  }
+  
+  .connect-form button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #EB4A4A;
+    background-color: #eb4a4a;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     width: 200px;
     border-radius: 30px;
     margin: 40px;
-   
+  
     align-content: top;
     align-items: top;
-}
-
-.connect-form button:hover {
+  }
+  
+  .connect-form button:hover {
     background-color: #fff;
-    color: #EB4A4A;
+    color: #eb4a4a;
     /* border: 1px solid #EB4A4A; */
-}
-
-.connect-image {
+  }
+  
+  .connect-image {
     flex-basis: 50%;
     /* text-align: right; */
     /* padding: px; */
-}
-
-.connect-image img {
-    width: 500px;
+  }
+  
+  .connect-image img {
+    /* width: 500px; */
+    width: 100%;
     height: auto;
     align-content: top;
     align-items: top;
     /* border-radius: 50%; */
     /* margin-bottom: 20px; */
-}
-.connect-image h3{
+  }
+  .connect-image h3 {
     font-size: 30px;
-}
-.connect-image p {
+  }
+  .connect-image p {
     font-size: 20px;
     color: #fff;
-   
-}
-
-.connect-image a {
+  }
+  
+  .connect-image a {
     font-size: 25px;
-    color: #EB4A4A;
+    color: #eb4a4a;
     padding-bottom: 200px;
     margin-bottom: 100px;
-}
-
-.connect-image a:hover {
+  }
+  
+  .connect-image a:hover {
     text-decoration: underline;
-}
+  }
+  
+  @media (max-width: 1024px) {
+    #about {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .about-container {
+      align-items: center;
+      max-width: 100%;
+    }
+  
+    .about-image {
+      width: 100vw;
+      height: auto;
+    }
+  
+    .about-details {
+      flex-basis: 100%;
+      align-items: center;
+      text-align: center;
+    }
+  
+    #project1-btn,
+    #project2-btn,
+    #project3-btn {
+      margin: 5px;
+    }
+  
+    .profile-pic {
+      width: 100vw;
+      padding: 30px;
+    }
+  
+    .hero-text {
+      max-width: 100%;
+      flex-basis: 100%;
+      text-align: center;
+    }
+  
+    .hero-text h1 {
+      font-size: 90px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      width: 100vw;
+      align-items: normal;
+      padding: 0px;
+      z-index: 1000;
+    }
+    .hamburger {
+      display: block;
+      position: fixed;
+      padding: 10px;
+      cursor: pointer;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    nav ul li {
+      margin: 20px;
+      padding: 10px;
+    }
+  
+    #nav-menu {
+      display: none;
+      justify-content: center;
+      width: 100vw;
+    }
+  
+    .hero {
+      height: auto;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  
+    .hero-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-image {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  
+    .hero-text {
+      max-width: 100%;
+      flex-basis: 100%;
+      text-align: center;
+    }
+  
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+  
+    #about,
+    #portfolio,
+    #connect {
+      padding: 20px;
+      width: 100vw;
+    }
+  
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    }
+  
+    .about-image,
+    .about-details {
+      flex-basis: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .about-details h2 {
+      font-size: 30px;
+    }
+  
+    .profile-pic {
+      width: 100%;
+      padding: 30px;
+    }
+  
+    .section-heading {
+      font-size: 3rem;
+    }
+  
+    #projects_names {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .portfolio-container {
+      flex-direction: column;
+      width: 100vw;
+    }
+  
+    .portfolio-image,
+    .portfolio-details {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  
+    .portfolio-details h3 {
+      font-size: 24px;
+    }
+  
+    #connect h2 {
+      font-size: 3rem;
+    }
+  
+    .connect-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .connect-form,
+    .connect-image {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  
+    .connect-form label {
+      font-size: 20px;
+    }
+  
+    .connect-form input,
+    .connect-form textarea {
+      font-size: 16px;
+    }
+  
+    .connect-image img {
+      width: 100%;
+      height: auto;
+    }
+  }
