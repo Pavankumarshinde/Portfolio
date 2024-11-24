@@ -564,9 +564,18 @@
     }
   
     .about-details {
+
       flex-basis: 100%;
       align-items: center;
       text-align: center;
+      text-justify: distribute-all-lines;
+      font-size: 15px;
+    }
+
+    .about-details #btn2{
+      margin-top: 10px;
+      padding-top: 1px;
+      display: none;
     }
   
     #project1-btn,
@@ -602,7 +611,7 @@
     .hamburger {
       display: block;
       position: fixed;
-      padding: 10px;
+     
       cursor: pointer;
     }
   
@@ -654,6 +663,7 @@
       font-size: 36px;
       margin-bottom: 10px;
     }
+   
   
     #about,
     #portfolio,
@@ -677,8 +687,11 @@
     }
   
     .about-details h2 {
-      font-size: 30px;
+      font-size: 27px;
+      line-height: 30px;
+      letter-spacing: 1px;
     }
+    
   
     .profile-pic {
       width: 100%;
@@ -706,7 +719,7 @@
     }
   
     .portfolio-details h3 {
-      font-size: 24px;
+      font-size: 20px;
     }
   
     #connect h2 {
@@ -739,3 +752,32 @@
       height: auto;
     }
   }
+
+  /* Hide the nav menu by default on small screens */
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Show the nav menu when the hamburger icon is clicked */
+#nav-menu.active {
+  display: flex;
+}
+
+/* Style for the hamburger icon */
+.hamburger {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* On larger screens, show the nav menu */
+@media (min-width: 1024px) {
+  #nav-menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .hamburger {
+    display: none;  /* Hide the hamburger icon on large screens */
+  }
+}
