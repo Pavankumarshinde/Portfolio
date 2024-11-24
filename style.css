@@ -649,7 +649,7 @@
     }
   
     .hero-image {
-      max-width: 100%;
+      max-width: 80%;
       flex-basis: 100%;
     }
   
@@ -681,6 +681,7 @@
   
     .about-image,
     .about-details {
+      align-items: center;
       flex-basis: 100%;
       text-align: center;
       padding: 10px;
@@ -694,7 +695,8 @@
     
   
     .profile-pic {
-      width: 100%;
+     
+      width: 90%;
       padding: 30px;
     }
   
@@ -717,6 +719,9 @@
       flex-basis: 100%;
       text-align: center;
     }
+    .portfolio-image{
+      max-width: 70%;
+    }
   
     .portfolio-details h3 {
       font-size: 20px;
@@ -736,19 +741,24 @@
     .connect-image {
       flex-basis: 100%;
       text-align: center;
+      padding: 0.1px;
+      
     }
+    
   
     .connect-form label {
       font-size: 20px;
+      padding: 0.1px;
+      margin: 0.1px;
     }
   
     .connect-form input,
     .connect-form textarea {
-      font-size: 16px;
+      font-size: 10px;
     }
   
     .connect-image img {
-      width: 100%;
+      width: 60%;
       height: auto;
     }
   }
@@ -780,4 +790,34 @@
   .hamburger {
     display: none;  /* Hide the hamburger icon on large screens */
   }
+}
+
+/* Set a default color for nav buttons */
+nav ul li {
+  color: #fff; /* Default button color */
+}
+
+/* Active link color when scrolling */
+nav ul li.active {
+  color: #eb4a4a; /* Red for active link */
+}
+
+/* Hover effect */
+nav ul li:hover {
+  color: #eb4a4a; /* Red on hover */
+}
+/* Set default color for nav buttons */
+nav ul li {
+  color: #fff; /* Default button color */
+  transition: color 0.3s ease;
+}
+
+/* Active link color when scrolling */
+nav ul li.active {
+  color: #eb4a4a; /* Red for active link */
+}
+
+/* Hover effect */
+nav ul li:hover {
+  color: #eb4a4a; /* Red on hover */
 }

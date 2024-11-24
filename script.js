@@ -94,3 +94,35 @@ navLinks.forEach((link) => {
     scrollToSection(sectionId, link);
   });
 });
+// Function to update active link based on scroll position and change button colors
+function updateActiveLinkOnScroll() {
+  const sections = document.querySelectorAll("main > section"); // Select sections directly under main
+  const scrollPosition = window.scrollY + 50; // Add offset for active link detection
+
+  let activeSection = null;
+  
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      activeSection = section.id; // Store the id of the active section
+    }
+  });
+
+  // If an active section is found, update the active link color
+  if (activeSection) {
+    const activeLink = document.querySelector(`#nav-menu li.active`);
+    if (activeLink) {
+      activeLink.classList.remove("active");
+      activeLink.style.color = "#fff"; // Reset the previous active link color
+    }
+    
+    const currentLink = document.querySelector(`#nav-menu #${activeSection}-link`);
+    currentLink.classList.add("active");
+    currentLink.style.color = "#eb4a4a"; // Red for the active link
+  }
+}
+
+// Add event listener to handle scroll events for color change
+window.addEventListener("scroll", updateActiveLinkOnScroll);
